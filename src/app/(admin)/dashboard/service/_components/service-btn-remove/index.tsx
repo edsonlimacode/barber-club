@@ -42,7 +42,7 @@ export function ServiceBtnRemove({ serviceId }: { serviceId: string }) {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className="border-0 bg-red-600 text-white hover:bg-red-500 hover:text-white">
+          <AlertDialogCancel className="border-0 bg-red-500 text-white hover:bg-red-500 hover:text-white dark:bg-red-600">
             Cancelar
           </AlertDialogCancel>
           <AlertDialogAction

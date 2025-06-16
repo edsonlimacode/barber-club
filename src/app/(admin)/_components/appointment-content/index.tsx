@@ -6,13 +6,7 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card"
-import {
-  AlertCircleIcon,
-  Calendar,
-  Loader,
-  LoaderPinwheel,
-  Search
-} from "lucide-react"
+import { AlertCircleIcon, Calendar, Loader } from "lucide-react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { getAppointmentsByDate } from "@/app/(site)/_actions/get-appointmenes-by-date"
 import {
@@ -103,18 +97,18 @@ export function AppointmentContent({ session }: { session: Session }) {
   }
 
   return (
-    <Card className="mx-auto max-h-[800px] max-w-6xl border-0 bg-zinc-100 dark:bg-zinc-800">
+    <Card className="mx-auto max-w-6xl border-0 bg-zinc-100 lg:max-h-[800px] dark:bg-zinc-800">
       <CardHeader>
         <CardTitle className="text-default text-2xl">Horários</CardTitle>
         <CardDescription />
       </CardHeader>
-      <CardContent className="h-[650px] max-h-[650px]">
+      <CardContent className="lg:h-[650px] lg:max-h-[650px]">
         {loading ? (
           <div className="flex h-full items-center justify-center">
             <Loader className="h-10 w-10 animate-spin text-zinc-400" />
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <input
