@@ -16,8 +16,8 @@ export function LoginBtn() {
       )}
 
       {status === "authenticated" && (
-        <Link href="/dashboard">
-          <Button className="flex h-10 items-center rounded-full px-4 text-zinc-200">
+        <Link href="/dashboard" className="w-full">
+          <Button className="flex h-10 w-full items-center rounded-full px-4 text-zinc-200">
             <User className="h-5 w-5 text-zinc-200" /> Entrar
           </Button>
         </Link>

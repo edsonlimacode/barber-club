@@ -31,7 +31,7 @@ export function ServiceBtnRemove({ serviceId }: { serviceId: string }) {
           <Trash2 className="dark:text-default h-5 w-5" />
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className="bg-zinc-800">
+      <AlertDialogContent className="border-0 bg-zinc-100 dark:bg-zinc-800">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-red-500">
             Tem certeza que deseja excluir este item?

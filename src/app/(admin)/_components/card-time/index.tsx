@@ -47,7 +47,7 @@ export function CardTime({
                 <X className="dark:text-default" />
               </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent className="bg-zinc-800">
+            <AlertDialogContent className="border-0 bg-zinc-100 dark:bg-zinc-800">
               <AlertDialogHeader>
                 <AlertDialogTitle className="text-red-500">
                   Tem certeza que deeseja cancelar esse agendamento?
@@ -58,7 +58,7 @@ export function CardTime({
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel className="border-0 bg-red-600 text-white hover:bg-red-500 hover:text-white">
+                <AlertDialogCancel className="border-0 bg-red-500 text-white hover:text-white dark:bg-red-600 hover:dark:bg-red-500">
                   Cancelar
                 </AlertDialogCancel>
                 <AlertDialogAction

@@ -12,10 +12,10 @@ export default async function Barber({
   const barber = await getBarberById(id)
 
   return (
-    <main className="container mx-auto mt-8 min-h-[calc(100vh-h-5)]">
+    <main className="container mx-auto mt-8 min-h-[calc(100vh-h-5)] px-4">
       <section className="mx-auto max-w-6xl">
         {barber && <BarberCard btnHidden barber={barber} />}
-        <div className="mt-4 grid grid-cols-4 gap-4">
+        <div className="my-4 grid grid-cols-1 gap-4 lg:grid-cols-4">
           {barber &&
             barber.services &&
             barber.services.map((service) => (

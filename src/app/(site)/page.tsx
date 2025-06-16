@@ -18,13 +18,13 @@ export default async function WebHome() {
             <h2 className="text-default text-2xl font-bold tracking-wide dark:font-thin">
               Barbearias
             </h2>
-            <p className="mt-2 text-5xl font-semibold text-zinc-600 dark:text-zinc-200">
+            <p className="mt-2 text-3xl font-semibold text-zinc-600 lg:text-5xl dark:text-zinc-200">
               Mais Populares
             </p>
           </div>
 
           <div className="container mx-auto">
-            <div className="mt-8 grid grid-cols-5 gap-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 px-4 lg:grid-cols-5">
               {barbers &&
                 barbers.map((barber) => (
                   <BarberCard key={barber.id} barber={barber} />

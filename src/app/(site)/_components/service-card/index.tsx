@@ -143,7 +143,7 @@ export function ServiceCard({ service }: ServiceProps) {
         Reservar
       </Button>
       <Sheet open={isOpen} onOpenChange={setOpen}>
-        <SheetContent className="[&>button>svg]:dark:text-default w-[600px] overflow-auto border-0 bg-zinc-100 p-4 dark:bg-zinc-800">
+        <SheetContent className="[&>button>svg]:dark:text-default overflow-auto border-0 bg-zinc-100 p-4 lg:w-[600px] dark:bg-zinc-800">
           <SheetHeader>
             <SheetTitle className="dark:text-default text-2xl text-zinc-600">
               Reserva
