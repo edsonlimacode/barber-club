@@ -32,5 +32,8 @@ export async function checkSubscription(userId: string) {
       plan: "EXPIRED",
       status: "inactive"
     }
-  } catch (error) {}
+  } catch (error: any) {
+    console.log("ERROR: ", error.message)
+    return null
+  }
 }

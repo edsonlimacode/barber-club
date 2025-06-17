@@ -8,8 +8,12 @@ import {
   CardTitle
 } from "@/components/ui/card"
 import { Check, X } from "lucide-react"
+import { CheckoutBasicBtn } from "./basic-checkout-btn"
+import { getUserSession } from "@/app/(admin)/_actions/get-user-session"
 
-export function BasicCardPlan() {
+export async function BasicCardPlan() {
+  const session = await getUserSession()
+
   return (
     <Card className="border-0 dark:bg-zinc-800">
       <CardHeader>
@@ -67,8 +71,7 @@ export function BasicCardPlan() {
         </ul>
       </CardContent>
       <CardFooter>
-        {/* <BasicPlanButton /> */}
-        <Button className="w-full uppercase">contratar</Button>
+        <CheckoutBasicBtn userId={session.userId} />
       </CardFooter>
     </Card>
   )
