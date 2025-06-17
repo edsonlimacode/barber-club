@@ -8,11 +8,9 @@ import {
 } from "@/components/ui/card"
 import { Check } from "lucide-react"
 import { CheckoutProBtn } from "./pro-checkout-btn"
-import { getUserSession } from "@/app/(admin)/_actions/get-user-session"
+import { Session } from "next-auth"
 
-export async function ProCardPlan() {
-  const session = await getUserSession()
-
+export async function ProCardPlan({ session }: { session: Session }) {
   return (
     <Card className="border-0 dark:bg-zinc-800">
       <CardHeader>

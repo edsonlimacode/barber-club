@@ -9,11 +9,9 @@ import {
 } from "@/components/ui/card"
 import { Check, X } from "lucide-react"
 import { CheckoutBasicBtn } from "./basic-checkout-btn"
-import { getUserSession } from "@/app/(admin)/_actions/get-user-session"
+import { Session } from "next-auth"
 
-export async function BasicCardPlan() {
-  const session = await getUserSession()
-
+export async function BasicCardPlan({ session }: { session: Session }) {
   return (
     <Card className="border-0 dark:bg-zinc-800">
       <CardHeader>

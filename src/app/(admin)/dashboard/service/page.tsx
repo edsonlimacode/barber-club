@@ -21,9 +21,16 @@ import { checkSubscription } from "../plan/_actions/check-subscription"
 export default async function Service() {
   const session = await getUserSession()
 
+  const hasSubscription = await checkSubscription(session.userId)
+
   const services = await getAllServices(session.userId)
 
-  const hasSubscription = await checkSubscription(session.userId)
+  const SERVICE_BASIC_LIMIT = hasSubscription?.plan === "BASIC" ? 3 : 100000
+
+  const canCreate =
+    hasSubscription?.plan === "BASIC" && services?.length >= SERVICE_BASIC_LIMIT
+      ? false
+      : true
 
   return (
     <>
@@ -32,7 +39,13 @@ export default async function Service() {
           <Card className="mx-auto max-w-3xl border-0 bg-zinc-100 dark:bg-zinc-800">
             <CardHeader className="flex items-center justify-between">
               <CardTitle className="text-default text-2xl">Serviços</CardTitle>
-              <ServiceFormModal userId={session.userId} />
+              {canCreate ? (
+                <ServiceFormModal userId={session.userId} />
+              ) : (
+                <small className="text-red-500">
+                  Limite do seu plano foi atingido
+                </small>
+              )}
             </CardHeader>
             <CardContent>
               <Table>
@@ -54,7 +67,7 @@ export default async function Service() {
                 </TableHeader>
                 <TableBody>
                   {services &&
-                    services.map((service) => (
+                    services.slice(0, SERVICE_BASIC_LIMIT).map((service) => (
                       <TableRow
                         key={service.id}
                         className="h-11 border-zinc-300 text-zinc-400 hover:bg-transparent dark:border-zinc-700"
