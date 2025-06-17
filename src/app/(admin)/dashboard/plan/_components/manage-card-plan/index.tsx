@@ -28,12 +28,18 @@ export function ManagerCardPlans({ customerId, plan }: ManagerPlansProps) {
   }
 
   return (
-    <Card className="dark:text-default border-0 text-zinc-600 dark:bg-zinc-800">
+    <Card className="border-0 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-200">
       <CardHeader>
-        <CardTitle className="text-xl font-bold uppercase">{plan}</CardTitle>
+        <CardTitle className="text-xl font-bold uppercase">
+          Plano atual
+        </CardTitle>
         <CardDescription />
       </CardHeader>
-      <CardContent>Seu plano atual</CardContent>
+      <CardContent>
+        <span className="block w-full rounded-sm bg-emerald-500 p-2 text-center font-bold text-zinc-800">
+          {plan}
+        </span>
+      </CardContent>
       <CardFooter>
         <Button onClick={handleManagerSubscriptions} className="w-full">
           Gerenciar meu plano
