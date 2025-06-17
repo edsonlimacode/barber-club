@@ -26,7 +26,7 @@ export async function ProCardPlan({ session }: { session: Session }) {
           <li className="flex items-center gap-2">
             <Check className="h-5 w-5 text-emerald-500" />
             <span className="text-sm text-zinc-700 dark:text-zinc-500">
-              Até 3 serviços cadastrados
+              Serviços Ilimitados
             </span>
           </li>
 
@@ -39,7 +39,7 @@ export async function ProCardPlan({ session }: { session: Session }) {
           <li className="flex items-center gap-2">
             <Check className="h-5 w-5 text-emerald-500" />
             <span className="text-sm text-zinc-700 dark:text-zinc-500">
-              Relatório básicos
+              Relatório avançados com filtros
             </span>
           </li>
           <li className="flex items-center gap-2">
@@ -54,12 +54,7 @@ export async function ProCardPlan({ session }: { session: Session }) {
               Envio de e-mails ilimitados
             </span>
           </li>
-          <li className="flex items-center gap-2">
-            <Check className="h-5 w-5 text-emerald-500" />
-            <span className="text-sm text-zinc-500 dark:text-zinc-500">
-              Relatórios completos
-            </span>
-          </li>
+
           <li className="mt-8">
             <span className="inline-block text-3xl font-bold text-emerald-500">
               R$ 57,90

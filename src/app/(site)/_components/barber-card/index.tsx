@@ -9,6 +9,9 @@ interface BarberCardProps {
     name: string | null
     image: string | null
     address: string | null
+    subscription: {
+      plan: string
+    }
   }
   btnHidden?: boolean
 }
@@ -20,18 +23,21 @@ export function BarberCard({ barber, btnHidden }: BarberCardProps) {
         src={barber?.image ? barber.image : "/hero1.jpg"}
         width={800}
         height={800}
-        className="max-h-[300px] w-full rounded-tl-lg rounded-tr-lg object-cover"
+        className="h-[200px] max-h-[200px] w-full rounded-tl-lg rounded-tr-lg object-cover"
         quality={100}
         priority
         alt=""
       />
-      <span className="dark:bg-default absolute top-4 left-3 flex items-center gap-2 rounded-full bg-zinc-100 p-2 text-black">
-        <Crown className="h-5 w-5" />
-      </span>
+      {barber.subscription && barber.subscription.plan === "PROFESSIONAL" && (
+        <span className="dark:bg-default absolute top-4 left-3 flex items-center gap-2 rounded-full bg-zinc-100 p-2 text-black">
+          <Crown className="h-5 w-5" />
+        </span>
+      )}
       <div className="px-2 py-4">
         <span className="line-clamp-2 text-2xl text-zinc-600 dark:text-zinc-200">
           {barber?.name}
         </span>
+
         <address className="mt-2 text-sm font-normal text-zinc-400">
           {barber?.address ? barber.address : ""}
         </address>

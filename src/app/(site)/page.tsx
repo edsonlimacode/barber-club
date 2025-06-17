@@ -25,6 +25,11 @@ export default async function WebHome() {
 
           <div className="container mx-auto">
             <div className="mt-8 grid grid-cols-1 gap-4 px-4 lg:grid-cols-5">
+              {barbers?.length == 0 && (
+                <div className="col-span-full text-center text-red-500">
+                  Nenhuma barbearia encontrada
+                </div>
+              )}
               {barbers &&
                 barbers.map((barber) => (
                   <BarberCard key={barber.id} barber={barber} />

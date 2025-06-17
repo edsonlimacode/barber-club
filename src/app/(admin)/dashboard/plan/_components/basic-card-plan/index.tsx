@@ -55,12 +55,7 @@ export async function BasicCardPlan({ session }: { session: Session }) {
               Envio de e-mails ilimitados
             </span>
           </li>
-          <li className="flex items-center gap-2">
-            <X className="h-5 w-5 text-zinc-500" />
-            <span className="text-sm text-zinc-500 line-through">
-              Relatórios completos
-            </span>
-          </li>
+
           <li className="mt-8">
             <span className="inline-block text-3xl font-bold text-emerald-500">
               R$ 27,90

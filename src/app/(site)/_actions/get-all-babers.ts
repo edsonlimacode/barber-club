@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server"
 
 import { prisma } from "@/lib/prisma"
@@ -8,6 +7,9 @@ export async function getAllBarbers() {
     const barbers = await prisma.user.findMany({
       orderBy: {
         createdAt: "desc"
+      },
+      include: {
+        subscription: true
       }
     })
 
