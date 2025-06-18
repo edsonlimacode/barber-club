@@ -160,7 +160,7 @@ export function ServiceFormModal({ userId }: { userId: string }) {
                       <SelectItem value="30">30 minutos</SelectItem>
                       <SelectItem value="60">1 hora</SelectItem>
                       <SelectItem value="90">1:30 minutos</SelectItem>
-                      <SelectItem value="120">2:00 minutos</SelectItem>
+                      <SelectItem value="120">2:00 horas</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />

@@ -214,25 +214,6 @@ export function ServiceCard({ service }: ServiceProps) {
                 )}
               />
 
-              {/* <div className="w-full">
-                <Calendar
-                  mode="single"
-                  locale={ptBR}
-                  selected={date}
-                  onSelect={(value) => {
-                    const dateSelected = value ? value : new Date()
-                    setDate(dateSelected)
-                  }}
-                  disabled={(date) => isBefore(date, startOfDay(new Date()))}
-                  className="w-full rounded-md text-zinc-50 dark:bg-zinc-900"
-                  classNames={{
-                    day_selected: "bg-default text-white dark:hover:bg-default",
-                    day_today: "border border-amber-400",
-                    nav_button:
-                      "hover:bg-default hover:text-white hover:bg-default rounded-md p-2"
-                  }}
-                />
-              </div> */}
               <div className="flex flex-col gap-3">
                 <label className="text-sm font-bold text-zinc-600 dark:text-zinc-200">
                   Data

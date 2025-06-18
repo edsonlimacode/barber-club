@@ -9,7 +9,7 @@ interface BarberCardProps {
     name: string | null
     image: string | null
     address: string | null
-    subscription: {
+    subscription?: {
       plan: string
     }
   }
